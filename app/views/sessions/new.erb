@@ -1,0 +1,13 @@
+<div class="container">
+  <%= erb :'/partials/_errors', layout: false%>
+  <h2>Login</h2>
+  <form method="POST" action="/login">
+      <label for="email_input">Email:</label>
+      <input  class="" name="user[email]" type="email" >
+      <label for="password_input">Password:</label>
+      <input  class="" name="user[password]" type="password" >
+      <hr>
+      <button class="" type="submit">Login</button>
+    </div>
+  </form>
+</div>
