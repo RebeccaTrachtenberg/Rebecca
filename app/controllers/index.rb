@@ -1,3 +1,3 @@
 get "/" do
-  redirect "/"
+   redirect '/posts'
 end

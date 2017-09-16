@@ -1,0 +1,23 @@
+<h2>SHOW ALL POSTS HERE</h2>
+<% @posts.each do |post| %>
+  <h3> <a href="/posts/:id"><%=post.title %></a></h3>
+      <p><strong><%=post.body %></strong></p>
+        <em><%=post.poster.username%> - <%= (post.created_at).strftime("%m/%d/%Y") %></em>
+          <form class="" action="" method="post">
+            <input type="submit" name="" value="+">
+            <input type="submit" name="" value="-">
+          </form>
+          <hr>
+        </form>
+        <%if @comments %>
+        <% @comments.each do |comment| %>
+          <%= comment.comment_body %>
+          <%= comment.rating %>
+          <form class="" action="/comments/:id/rating" method="post">
+          <input type="submit" name="" value="^">
+          <input type="submit" name="" value="v">
+          </form>
+          <hr>
+          <%end  %>
+        <%end  %>
+<% end  %>

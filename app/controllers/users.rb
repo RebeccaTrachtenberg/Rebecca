@@ -1,13 +1,11 @@
 get "/users/new" do
-  erb :"/users/new"
+  erb :'users/new'
 end
 
 get "/users/:id" do
   if logged_in?
     @user= User.find_by(id: params[:id])
-    # @bidding = @user.bidding.uniq
-    # @auctions = @user.items
-    erb :'/users/show'
+    erb :'users/show'
   else
     redirect "/"
   end
